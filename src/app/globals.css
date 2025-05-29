@@ -1,0 +1,357 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #2563eb;
+  --primary-blue-dark: #1d4ed8;
+  --secondary-slate: #475569;
+  --accent-blue: #3b82f6;
+  --neutral-gray: #64748b;
+  --light-gray: #f8fafc;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  
+  /* Industry Standard Spacing System (8px grid) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+  
+  /* Touch Target Sizes */
+  --touch-target-sm: 2.75rem; /* 44px - Minimum touch target */
+  --touch-target-md: 3rem;    /* 48px - Comfortable touch target */
+  --touch-target-lg: 3.5rem;  /* 56px - Large touch target */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: var(--font-inter);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    /* Improve text rendering on mobile */
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    /* Responsive line height */
+    line-height: 1.2;
+  }
+  
+  /* Improve touch targets for all interactive elements */
+  button, a, input, textarea, select {
+    min-height: var(--touch-target-sm);
+  }
+  
+  /* Prevent zoom on input focus (iOS) */
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+@layer components {
+  /* Button Components with proper touch targets */
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/25;
+    min-height: var(--touch-target-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/80 backdrop-blur-sm hover:bg-white text-slate-900 font-semibold py-3 px-6 rounded-xl border border-slate-200 hover:border-slate-300 transition-all duration-300 shadow-lg hover:shadow-xl;
+    min-height: var(--touch-target-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-glass {
+    @apply bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300;
+    min-height: var(--touch-target-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Mobile-first padding system */
+  .section-padding {
+    @apply py-12 px-4 sm:py-16 sm:px-6 lg:py-20 lg:px-8;
+  }
+  
+  .section-padding-sm {
+    @apply py-8 px-4 sm:py-12 sm:px-6 lg:py-16 lg:px-8;
+  }
+  
+  .section-padding-lg {
+    @apply py-16 px-4 sm:py-20 sm:px-6 lg:py-24 lg:px-8;
+  }
+  
+  /* Container with proper max-widths */
+  .container-custom {
+    @apply max-w-7xl mx-auto w-full;
+  }
+  
+  /* Mobile-optimized spacing */
+  .mobile-spacing {
+    @apply space-y-4 sm:space-y-6 lg:space-y-8;
+  }
+  
+  .mobile-grid {
+    @apply grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:gap-8 xl:grid-cols-3;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  }
+  
+  /* Glass morphism with mobile considerations */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg rounded-xl;
+  }
+  
+  .glass-card-mobile {
+    @apply bg-white/90 backdrop-blur-md border border-white/30 shadow-lg rounded-xl;
+  }
+  
+  .glass-dark {
+    @apply bg-slate-900/80 backdrop-blur-md border border-slate-700/50 rounded-xl;
+  }
+  
+  /* Optimized hover effects for touch devices */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-slate-200/50;
+  }
+  
+  @media (hover: none) {
+    .card-hover:active {
+      @apply shadow-xl shadow-slate-200/50;
+    }
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #2563eb, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Typography scale for mobile */
+  .heading-xl {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold;
+  }
+  
+  .heading-lg {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold;
+  }
+  
+  .heading-md {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold;
+  }
+  
+  .heading-sm {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold;
+  }
+  
+  .body-lg {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+  
+  .body-md {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  /* Mobile-first form styling */
+  .form-input {
+    @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300 text-base;
+    min-height: var(--touch-target-sm);
+  }
+  
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300 resize-none text-base;
+    min-height: 120px;
+  }
+  
+  /* Animation utilities */
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .slide-up {
+    @apply animate-slide-up;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  .animate-gentle-float {
+    animation: gentleFloat 8s ease-in-out infinite;
+  }
+  
+  /* Safe area utilities for mobile */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  /* Touch-friendly utilities */
+  .touch-target {
+    min-height: var(--touch-target-sm);
+    min-width: var(--touch-target-sm);
+  }
+  
+  .touch-target-lg {
+    min-height: var(--touch-target-lg);
+    min-width: var(--touch-target-lg);
+  }
+  
+  /* Scrolling utilities */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Backdrop blur utilities */
+  .backdrop-blur-light {
+    backdrop-filter: blur(8px);
+  }
+  
+  .backdrop-blur-heavy {
+    backdrop-filter: blur(20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Focus styles for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Reduce motion for better mobile performance */
+  .card-hover {
+    @apply hover:shadow-lg;
+  }
+  
+  /* Increase touch targets on mobile */
+  button, .btn-primary, .btn-secondary, .btn-glass {
+    min-height: var(--touch-target-md);
+    padding: 0.875rem 1.5rem;
+  }
+  
+  /* Better spacing on mobile */
+  .section-padding {
+    @apply py-8 px-4;
+  }
+  
+  /* Optimize font sizes for mobile readability */
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-xl;
+  }
+  
+  h3 {
+    @apply text-lg;
+  }
+} 
