@@ -11,13 +11,20 @@ const ProductsSection = () => {
     threshold: 0.1,
   });
 
+  const handleWhatsAppQuote = () => {
+    const phoneNumber = "+919978728781";
+    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   const products = [
     {
       id: 1,
       title: "FIBC Bags",
       subtitle: "Flexible Intermediate Bulk Containers",
       description: "High-quality bulk bags designed for efficient storage and transportation of various materials. Available in multiple configurations and specifications.",
-      image: "/images/fibc-bags-product.jpg",
+      image: "/images/fibc-bag.jpg",
       features: [
         "Multiple lifting loop configurations",
         "Food grade and conductive options",
@@ -33,7 +40,7 @@ const ProductsSection = () => {
       title: "Biodegradable Garbage Bags",
       subtitle: "Eco-Friendly Waste Management",
       description: "100% biodegradable and compostable garbage bags that break down naturally. Perfect for environmentally conscious businesses and households.",
-      image: "/images/garbage-bags-product.jpg",
+      image: "/images/biodegradable-garbage-bag.jpg",
       features: [
         "100% biodegradable material",
         "Compostable and eco-friendly",
@@ -46,35 +53,20 @@ const ProductsSection = () => {
     },
     {
       id: 3,
-      title: "PP Woven Bags",
-      subtitle: "Durable Polypropylene Solutions",
-      description: "High-strength polypropylene woven bags ideal for packaging grains, fertilizers, chemicals, and other bulk materials with excellent durability.",
-      image: "/images/pp-woven-bags-product.jpg",
+      title: "Garbage Bag",
+      subtitle: "Durable Waste Management Solutions",
+      description: "High-quality garbage bags ideal for waste management, cleaning applications, and general-purpose use with excellent durability and strength.",
+      image: "/images/garbage-bag.jpg",
       features: [
         "High tensile strength",
         "Moisture resistant",
-        "UV stabilized options",
+        "Various sizes available",
         "Custom printing available"
       ],
       icon: Layers,
       gradient: "from-purple-500 to-purple-600",
-      link: "/products/pp-woven-bags"
+      link: "/products/garbage-bags"
     }
-  ];
-
-  const fibcTypes = [
-    { name: "Ventilated FIBC Bag", description: "Perfect for products requiring air circulation" },
-    { name: "UN Panel FIBC Bag", description: "UN certified for hazardous materials transport" },
-    { name: "Conductive FIBC Bag", description: "Anti-static properties for sensitive materials" },
-    { name: "Linear FIBC Bag", description: "Cost-effective linear bag design" },
-    { name: "Food Grade FIBC Bag", description: "FDA approved for food-grade applications" },
-    { name: "Standard FIBC Bag", description: "General purpose bulk storage solution" },
-    { name: "Tunnel Loop FIBC Bag", description: "Enhanced lifting and handling capabilities" },
-    { name: "U Panel FIBC Bag", description: "Optimized for maximum storage capacity" },
-    { name: "4 Panel FIBC Bag", description: "Four-panel construction for stability" },
-    { name: "One Loop FIBC Bag", description: "Single loop design for specific applications" },
-    { name: "Two Loop FIBC Bag", description: "Twin loop configuration for balanced lifting" },
-    { name: "Buffle FIBC Bag", description: "Internal baffles for shape retention" }
   ];
 
   return (
@@ -151,38 +143,6 @@ const ProductsSection = () => {
           ))}
         </div>
 
-        {/* FIBC Types Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="glass-card p-6 sm:p-8 lg:p-12 border border-white/50 shadow-lg"
-        >
-          <div className="text-center mb-8 sm:mb-12">
-            <h3 className="heading-md text-slate-900 mb-4 sm:mb-6">
-              FIBC Bag <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Varieties</span>
-            </h3>
-            <p className="body-lg text-slate-600 max-w-2xl mx-auto px-4">
-              We manufacture a comprehensive range of FIBC bags to meet specific industry requirements
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {fibcTypes.map((type, index) => (
-              <motion.div
-                key={type.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.6 + index * 0.03 }}
-                className="glass-card p-4 sm:p-6 hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-200"
-              >
-                <h4 className="font-bold text-slate-900 mb-2 text-base sm:text-lg leading-tight">{type.name}</h4>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{type.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -201,12 +161,12 @@ const ProductsSection = () => {
                 Contact us for detailed specifications and bulk pricing.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
-                <Link 
-                  href="/contact"
+                <button 
+                  onClick={handleWhatsAppQuote}
                   className="bg-white text-slate-900 hover:bg-slate-100 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 hover:shadow-lg touch-target focus-ring"
                 >
                   Request Quote
-                </Link>
+                </button>
                 <Link 
                   href="/products"
                   className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 hover:border-white touch-target focus-ring"

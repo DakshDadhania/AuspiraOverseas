@@ -15,7 +15,7 @@ const Footer = () => {
   const products = [
     { name: "FIBC Bags", href: "/products/fibc-bags" },
     { name: "Garbage Bags", href: "/products/garbage-bags" },
-    { name: "PP Woven Bags", href: "/products/pp-woven-bags" },
+    { name: "Garbage Bag", href: "/products/garbage-bags" },
     { name: "Custom Solutions", href: "/contact" },
   ];
 
@@ -39,7 +39,7 @@ const Footer = () => {
     },
     {
       icon: MapPin,
-      title: "Address",
+      title: "Office address",
       details: ["Shop No. 6, Second Floor", "Laxminarayan Complex, Tankara"]
     },
     {
@@ -63,9 +63,11 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg sm:text-xl">A</span>
-              </div>
+              <img 
+                src="/images/logo.jpg" 
+                alt="Auspira Overseas Logo"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain shadow-lg"
+              />
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold leading-tight">
                   Auspira <span className="text-blue-400">Overseas</span>

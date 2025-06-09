@@ -8,6 +8,13 @@ import Link from "next/link";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const handleWhatsAppQuote = () => {
+    const phoneNumber = "+919978728781";
+    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   const slides = [
     {
       id: 1,
@@ -129,12 +136,12 @@ const HeroSection = () => {
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </Link>
-              <Link 
-                href="/contact"
+              <button 
+                onClick={handleWhatsAppQuote}
                 className="border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 hover:border-white w-full sm:w-auto touch-target focus-ring"
               >
                 Get Quote
-              </Link>
+              </button>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -156,22 +163,6 @@ const HeroSection = () => {
       >
         <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
-
-      {/* Slide Indicators - Touch friendly on mobile */}
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => handleSlideSelect(index)}
-            className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 touch-target focus-ring ${
-              index === currentSlide 
-                ? "bg-white w-6 sm:w-8" 
-                : "bg-white/50 hover:bg-white/70 w-2 sm:w-2.5"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
 
       {/* Features Bar - Glass Morphism with mobile optimization */}
       <div className="absolute bottom-0 left-0 right-0 z-10 bg-white/10 backdrop-blur-xl border-t border-white/20">
@@ -196,11 +187,6 @@ const HeroSection = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Mobile swipe hint */}
-      <div className="absolute bottom-20 sm:hidden left-1/2 transform -translate-x-1/2 z-20 text-white/70 text-xs text-center">
-        <p>Swipe or tap indicators to navigate</p>
       </div>
     </section>
   );

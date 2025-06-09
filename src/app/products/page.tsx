@@ -14,13 +14,22 @@ const ProductsPage = () => {
     threshold: 0.1,
   });
 
+  const handleWhatsAppQuote = (productName?: string) => {
+    const phoneNumber = "+919978728781";
+    const message = productName 
+      ? `Hello! I'm interested in getting a quote for ${productName}. Please provide more information.`
+      : "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   const mainProducts = [
     {
       id: 1,
       title: "FIBC Bags",
       subtitle: "Flexible Intermediate Bulk Containers",
       description: "Comprehensive range of FIBC bags designed for various industrial applications with different configurations and specifications.",
-      image: "/api/placeholder/600/400",
+      image: "/images/fibc-bag.jpg",
       features: [
         "Multiple lifting loop configurations",
         "Food grade and conductive options",
@@ -38,7 +47,7 @@ const ProductsPage = () => {
       title: "Biodegradable Garbage Bags",
       subtitle: "Eco-Friendly Waste Management Solutions",
       description: "100% biodegradable and compostable garbage bags that naturally decompose, supporting environmental sustainability initiatives.",
-      image: "/api/placeholder/600/400",
+      image: "/images/biodegradable-garbage-bag.jpg",
       features: [
         "100% biodegradable material",
         "Compostable and eco-friendly",
@@ -53,10 +62,10 @@ const ProductsPage = () => {
     },
     {
       id: 3,
-      title: "PP Woven Bags",
-      subtitle: "Durable Polypropylene Solutions",
-      description: "High-strength polypropylene woven bags suitable for packaging various bulk materials with excellent durability and resistance.",
-      image: "/api/placeholder/600/400",
+      title: "Garbage Bag",
+      subtitle: "Durable Waste Management Solutions",
+      description: "High-quality garbage bags ideal for waste management, cleaning applications, and general-purpose use with excellent durability and strength.",
+      image: "/images/garbage-bag.jpg",
       features: [
         "High tensile strength",
         "Moisture resistant",
@@ -68,45 +77,6 @@ const ProductsPage = () => {
       icon: Layers,
       gradient: "from-purple-500 to-purple-600",
       applications: ["Agriculture", "Fertilizers", "Cement", "Animal Feed", "Rice & Grains", "Chemical Powders"]
-    }
-  ];
-
-  const fibcTypes = [
-    {
-      name: "Ventilated FIBC Bag",
-      description: "Perfect for products requiring air circulation during storage and transport",
-      specifications: "Breathable fabric, Multiple vent options, Standard and custom sizes",
-      image: "/api/placeholder/300/200"
-    },
-    {
-      name: "UN Panel FIBC Bag",
-      description: "UN certified for safe transport of hazardous materials",
-      specifications: "UN certification, Heavy-duty construction, Safety compliance",
-      image: "/api/placeholder/300/200"
-    },
-    {
-      name: "Conductive FIBC Bag",
-      description: "Anti-static properties for sensitive materials",
-      specifications: "Conductive yarns, Static dissipation, Safe for flammable materials",
-      image: "/api/placeholder/300/200"
-    },
-    {
-      name: "Food Grade FIBC Bag",
-      description: "FDA approved for food-grade applications",
-      specifications: "Food-safe materials, FDA compliance, Hygienic manufacturing",
-      image: "/api/placeholder/300/200"
-    },
-    {
-      name: "Linear FIBC Bag",
-      description: "Cost-effective linear bag design for general applications",
-      specifications: "Linear construction, Economic option, Standard capacities",
-      image: "/api/placeholder/300/200"
-    },
-    {
-      name: "Standard FIBC Bag",
-      description: "General purpose bulk storage solution",
-      specifications: "Versatile design, Multiple loop options, Custom printing",
-      image: "/api/placeholder/300/200"
     }
   ];
 
@@ -204,13 +174,29 @@ const ProductsPage = () => {
 
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <button className={`inline-flex items-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}>
-                        <Eye className="w-5 h-5" />
-                        <span>View Details</span>
-                      </button>
-                      <button className="inline-flex items-center space-x-2 border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+                      {product.id === 1 ? (
+                        <Link 
+                          href="/products/fibc-varieties"
+                          className={`inline-flex items-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}
+                        >
+                          <Eye className="w-5 h-5" />
+                          <span>View Details</span>
+                        </Link>
+                      ) : (
+                        <button 
+                          onClick={() => handleWhatsAppQuote(product.title)}
+                          className={`inline-flex items-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}
+                        >
+                          <Eye className="w-5 h-5" />
+                          <span>Get Quote</span>
+                        </button>
+                      )}
+                      <button 
+                        onClick={() => handleWhatsAppQuote(product.title)}
+                        className="inline-flex items-center space-x-2 border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                      >
                         <Download className="w-5 h-5" />
-                        <span>Download Specs</span>
+                        <span>Request Quote</span>
                       </button>
                     </div>
                   </div>
@@ -226,56 +212,6 @@ const ProductsPage = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FIBC Varieties Section */}
-        <section className="section-padding bg-gray-50">
-          <div className="container-custom">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                FIBC Bag <span className="text-gradient">Varieties</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Specialized FIBC bags designed for specific industry requirements and applications
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {fibcTypes.map((type, index) => (
-                <motion.div
-                  key={type.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden card-hover"
-                >
-                  <div 
-                    className="h-48 bg-cover bg-center"
-                    style={{ 
-                      backgroundImage: `url('${type.image}')`
-                    }}
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{type.name}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{type.description}</p>
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Specifications:</h4>
-                      <p className="text-sm text-gray-600">{type.specifications}</p>
-                    </div>
-                    <button className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2">
-                      <span>Get Quote</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
                   </div>
                 </motion.div>
               ))}
@@ -371,12 +307,12 @@ const ProductsPage = () => {
                 Get in touch for detailed specifications, bulk pricing, and custom designs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
+                <button
+                  onClick={() => handleWhatsAppQuote()}
                   className="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Request Quote
-                </Link>
+                </button>
                 <button className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">
                   <Download className="w-5 h-5" />
                   <span>Download Catalog</span>

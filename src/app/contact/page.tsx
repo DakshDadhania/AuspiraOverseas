@@ -14,6 +14,13 @@ const ContactPage = () => {
     threshold: 0.1,
   });
 
+  const handleWhatsAppQuote = () => {
+    const phoneNumber = "+919978728781";
+    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -261,7 +268,7 @@ const ContactPage = () => {
                         <option value="">Select a product</option>
                         <option value="fibc-bags">FIBC Bags</option>
                         <option value="garbage-bags">Biodegradable Garbage Bags</option>
-                        <option value="pp-woven-bags">PP Woven Bags</option>
+                        <option value="garbage-bags">Garbage Bag</option>
                         <option value="custom-solutions">Custom Solutions</option>
                         <option value="bulk-order">Bulk Order</option>
                       </select>
@@ -394,15 +401,11 @@ const ContactPage = () => {
               {[
                 {
                   question: "What is the minimum order quantity?",
-                  answer: "Our minimum order quantity varies by product type. For FIBC bags, it's typically 500 pieces, while for garbage bags, it starts from 1000 pieces."
+                  answer: "Our minimum order quantity varies by product type. For FIBC bags, it's typically 5000 pieces, while for garbage bags, it starts from 1000 pieces."
                 },
                 {
                   question: "Do you offer custom designs?",
                   answer: "Yes, we offer complete customization including size, printing, colors, and specifications to meet your exact requirements."
-                },
-                {
-                  question: "What are your delivery timelines?",
-                  answer: "Standard delivery is 15-20 days for domestic orders and 25-30 days for international orders, depending on quantity and customization."
                 },
                 {
                   question: "Are your products BEE compliant?",
@@ -415,6 +418,10 @@ const ContactPage = () => {
                 {
                   question: "What payment methods do you accept?",
                   answer: "We accept various payment methods including bank transfers, letters of credit, and other secure payment options for international trade."
+                },
+                {
+                  question: "Can I visit your manufacturing facility?",
+                  answer: "Yes, we welcome facility visits. Please contact us in advance to schedule a tour of our manufacturing unit in Tankara, Morbi."
                 }
               ].map((faq, index) => (
                 <motion.div
@@ -449,10 +456,16 @@ const ContactPage = () => {
                 competitive pricing, and reliable delivery solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
-                <button className="btn-primary bg-white text-blue-700 hover:bg-blue-50 focus-ring">
+                <button 
+                  onClick={handleWhatsAppQuote}
+                  className="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 touch-target focus-ring"
+                >
                   Request Quote
                 </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl touch-target focus-ring">
+                <button 
+                  onClick={handleWhatsAppQuote}
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl touch-target focus-ring"
+                >
                   Schedule Call
                 </button>
               </div>

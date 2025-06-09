@@ -9,6 +9,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const handleWhatsAppQuote = () => {
+    const phoneNumber = "+919978728781";
+    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -75,10 +82,12 @@ const Header = () => {
               onClick={handleMobileLinkClick}
             >
               <div className="relative">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <span className="text-white font-bold text-lg sm:text-xl">A</span>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
+                <img 
+                  src="/images/logo.jpg" 
+                  alt="Auspira Overseas Logo"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-700/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">
@@ -110,12 +119,12 @@ const Header = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Link 
-                href="/contact" 
+              <button 
+                onClick={handleWhatsAppQuote}
                 className="btn-primary focus-ring"
               >
                 Get Quote
-              </Link>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -187,13 +196,15 @@ const Header = () => {
                     transition={{ delay: navItems.length * 0.1, duration: 0.3 }}
                     className="pt-4 border-t border-slate-200"
                   >
-                    <Link
-                      href="/contact"
-                      onClick={handleMobileLinkClick}
+                    <button
+                      onClick={() => {
+                        handleWhatsAppQuote();
+                        handleMobileLinkClick();
+                      }}
                       className="btn-primary w-full focus-ring"
                     >
                       Get Quote
-                    </Link>
+                    </button>
                   </motion.div>
                 </nav>
               </div>

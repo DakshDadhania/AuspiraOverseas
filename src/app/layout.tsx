@@ -7,8 +7,8 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 
 export const metadata: Metadata = {
   title: "Auspira Overseas - Industrial Bulk Bag Suppliers | FIBC Bags Manufacturer",
-  description: "Leading manufacturer of FIBC bags, bulk bags, garbage bags, and PP woven bags. BEE compliant industrial packaging solutions for global markets.",
-  keywords: "FIBC bags, bulk bags, industrial packaging, garbage bags, PP woven bags, Auspira Overseas",
+  description: "Leading manufacturer of FIBC bags, bulk bags, garbage bags, and Garbage Bag. BEE compliant industrial packaging solutions for global markets.",
+  keywords: "FIBC bags, bulk bags, industrial packaging, garbage bags, Garbage Bag, Auspira Overseas",
   authors: [{ name: "Auspira Overseas" }],
   openGraph: {
     title: "Auspira Overseas - Industrial Bulk Bag Suppliers",

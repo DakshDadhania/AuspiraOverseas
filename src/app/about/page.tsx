@@ -13,6 +13,13 @@ const AboutPage = () => {
     threshold: 0.1,
   });
 
+  const handleWhatsAppQuote = () => {
+    const phoneNumber = "+919978728781";
+    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   const stats = [
     { number: "15+", label: "Years of Excellence", icon: Award },
     { number: "500+", label: "Satisfied Clients", icon: Users },
@@ -21,12 +28,11 @@ const AboutPage = () => {
   ];
 
   const milestones = [
-    { year: "2009", title: "Company Founded", description: "Auspira Overseas was established with a vision to provide quality industrial packaging solutions." },
-    { year: "2012", title: "BEE Certification", description: "Achieved BEE compliance and international quality certifications for our manufacturing processes." },
-    { year: "2015", title: "Global Expansion", description: "Started exporting to international markets, serving clients across multiple continents." },
-    { year: "2018", title: "Eco-Initiative", description: "Launched biodegradable product line, contributing to environmental sustainability." },
-    { year: "2020", title: "Digital Transformation", description: "Modernized operations with digital processes and enhanced quality control systems." },
-    { year: "2024", title: "Industry Leader", description: "Recognized as a leading manufacturer in the bulk bag industry with cutting-edge solutions." },
+    { title: "Company Founded", description: "Auspira Overseas was established with a vision to provide quality industrial packaging solutions." },
+    { title: "BEE Certification", description: "Achieved BEE compliance and international quality certifications for our manufacturing processes." },
+    { title: "Global Expansion", description: "Started exporting to international markets, serving clients across multiple continents." },
+    { title: "Eco-Initiative", description: "Launched biodegradable product line, contributing to environmental sustainability." },
+    { title: "Digital Transformation", description: "Modernized operations with digital processes and enhanced quality control systems." }
   ];
 
   const values = [
@@ -187,7 +193,7 @@ const AboutPage = () => {
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
                   <motion.div
-                    key={milestone.year}
+                    key={milestone.title}
                     initial={{ opacity: 0, y: 30 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -195,7 +201,6 @@ const AboutPage = () => {
                   >
                     <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
                       <div className="bg-white rounded-2xl p-6 shadow-lg card-hover">
-                        <div className="text-blue-700 font-bold text-2xl mb-2">{milestone.year}</div>
                         <h3 className="text-xl font-bold text-gray-900 mb-3">{milestone.title}</h3>
                         <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
                       </div>
@@ -294,10 +299,14 @@ const AboutPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="relative"
               >
-                <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 flex items-center justify-center">
-                  <Factory className="w-32 h-32 text-blue-700" />
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="/images/factory-image.jpg" 
+                    alt="Auspira Overseas Manufacturing Facility"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-700/10 to-blue-800/10 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-700/20 to-blue-800/20 rounded-2xl"></div>
               </motion.div>
             </div>
           </div>
@@ -319,12 +328,12 @@ const AboutPage = () => {
                 industrial packaging needs. Let's build a successful partnership together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
+                <button
+                  onClick={handleWhatsAppQuote}
                   className="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
-                  Get in Touch
-                </a>
+                  Request Quote
+                </button>
                 <a
                   href="/products"
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
