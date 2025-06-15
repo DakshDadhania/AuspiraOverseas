@@ -41,9 +41,7 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form or show success message
+    // Form will be submitted to FormSpree
   };
 
   const contactInfo = [
@@ -173,7 +171,7 @@ const ContactPage = () => {
                   Fill out the form below and we'll get back to you within 24 hours with a detailed response.
                 </p>
 
-                <form onSubmit={handleSubmit} className="mobile-spacing">
+                <form action="https://formspree.io/f/movwwakp" method="POST" className="mobile-spacing">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">

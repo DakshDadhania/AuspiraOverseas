@@ -30,7 +30,7 @@ const HeroSection = () => {
       title: "Global Export Excellence",
       subtitle: "Trusted Worldwide for Quality & Reliability",
       description: "Our flexible Intermediate Bulk Containers (FIBCs) offer cost-effective packaging solutions for diverse industries across the globe.",
-      image: "/images/hero-slide-2.jpg",
+      image: "/images/hero-slide-2.png",
       cta: "Learn More",
       ctaLink: "/about"
     },

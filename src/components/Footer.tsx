@@ -182,16 +182,23 @@ const Footer = () => {
             <p className="text-gray-300 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base">
               Subscribe to our newsletter for the latest updates on products, industry news, and special offers.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
+            <form 
+              action="https://formspree.io/f/movwwakp"
+              method="POST"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto"
+            >
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email"
+                required
                 className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 text-sm sm:text-base touch-target"
               />
-              <button className="btn-primary px-6 sm:px-8 whitespace-nowrap">
+              <input type="hidden" name="form_type" value="newsletter" />
+              <button type="submit" className="btn-primary px-6 sm:px-8 whitespace-nowrap">
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </motion.div>

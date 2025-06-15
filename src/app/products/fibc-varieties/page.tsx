@@ -164,7 +164,7 @@ const FIBCVarietiesPage = () => {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden card-hover"
                 >
                   <div 
-                    className="h-48 bg-cover bg-center"
+                    className="h-56 sm:h-64 md:h-72 bg-cover bg-center"
                     style={{ 
                       backgroundImage: `url('${type.image}')`
                     }}

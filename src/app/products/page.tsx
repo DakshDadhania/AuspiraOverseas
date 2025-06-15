@@ -175,29 +175,31 @@ const ProductsPage = () => {
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
                       {product.id === 1 ? (
-                        <Link 
-                          href="/products/fibc-varieties"
-                          className={`inline-flex items-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}
-                        >
-                          <Eye className="w-5 h-5" />
-                          <span>View Details</span>
-                        </Link>
+                        <>
+                          <Link 
+                            href="/products/fibc-varieties"
+                            className={`inline-flex items-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}
+                          >
+                            <Eye className="w-5 h-5" />
+                            <span>View Details</span>
+                          </Link>
+                          <button 
+                            onClick={() => handleWhatsAppQuote(product.title)}
+                            className="inline-flex items-center space-x-2 border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                          >
+                            <Download className="w-5 h-5" />
+                            <span>Request Quote</span>
+                          </button>
+                        </>
                       ) : (
                         <button 
                           onClick={() => handleWhatsAppQuote(product.title)}
-                          className={`inline-flex items-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}
+                          className="inline-flex items-center space-x-2 border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
                         >
-                          <Eye className="w-5 h-5" />
-                          <span>Get Quote</span>
+                          <Download className="w-5 h-5" />
+                          <span>Request Quote</span>
                         </button>
                       )}
-                      <button 
-                        onClick={() => handleWhatsAppQuote(product.title)}
-                        className="inline-flex items-center space-x-2 border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
-                      >
-                        <Download className="w-5 h-5" />
-                        <span>Request Quote</span>
-                      </button>
                     </div>
                   </div>
 
@@ -205,7 +207,7 @@ const ProductsPage = () => {
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                     <div className="relative rounded-2xl overflow-hidden shadow-xl">
                       <div 
-                        className="aspect-[4/3] bg-cover bg-center"
+                        className="aspect-[4/3] h-64 sm:h-80 md:h-96 bg-cover bg-center"
                         style={{ 
                           backgroundImage: `url('${product.image}')`
                         }}

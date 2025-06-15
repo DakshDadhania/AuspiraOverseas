@@ -99,7 +99,7 @@ const ProductsSection = () => {
               className="group glass-card hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200"
             >
               {/* Image Section */}
-              <div className="relative overflow-hidden h-44 sm:h-48">
+              <div className="relative overflow-hidden h-56 sm:h-64 md:h-72">
                 <div 
                   className="w-full h-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
                   style={{ 
@@ -132,7 +132,7 @@ const ProductsSection = () => {
 
                 {/* CTA Button */}
                 <Link 
-                  href={product.link}
+                  href="/products"
                   className={`group/btn inline-flex items-center justify-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 w-full sm:w-auto touch-target focus-ring text-sm sm:text-base`}
                 >
                   <span>Learn More</span>
