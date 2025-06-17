@@ -181,7 +181,7 @@ const ProductsPage = () => {
                             className={`inline-flex items-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1`}
                           >
                             <Eye className="w-5 h-5" />
-                            <span>View Details</span>
+                            <span>View Categories</span>
                           </Link>
                           <button 
                             onClick={() => handleWhatsAppQuote(product.title)}
@@ -207,9 +207,10 @@ const ProductsPage = () => {
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                     <div className="relative rounded-2xl overflow-hidden shadow-xl">
                       <div 
-                        className="aspect-[4/3] h-64 sm:h-80 md:h-96 bg-cover bg-center"
+                        className="aspect-[4/3] h-80 sm:h-80 md:h-96 bg-cover bg-center"
                         style={{ 
-                          backgroundImage: `url('${product.image}')`
+                          backgroundImage: `url('${product.image}')`,
+                          backgroundPosition: 'center center'
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>

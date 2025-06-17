@@ -154,7 +154,7 @@ const FIBCVarietiesPage = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
               {fibcTypes.map((type, index) => (
                 <motion.div
                   key={type.name}
@@ -164,24 +164,24 @@ const FIBCVarietiesPage = () => {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden card-hover"
                 >
                   <div 
-                    className="h-56 sm:h-64 md:h-72 bg-cover bg-center"
+                    className="h-80 sm:h-72 md:h-80 lg:h-72 bg-cover bg-center"
                     style={{ 
                       backgroundImage: `url('${type.image}')`
                     }}
                   />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{type.name}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{type.description}</p>
+                  <div className="p-8 sm:p-7 md:p-8">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{type.name}</h3>
+                    <p className="text-gray-600 mb-5 leading-relaxed text-base sm:text-lg">{type.description}</p>
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Specifications:</h4>
-                      <p className="text-sm text-gray-600">{type.specifications}</p>
+                      <h4 className="font-semibold text-gray-900 mb-3 text-base sm:text-lg">Specifications:</h4>
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{type.specifications}</p>
                     </div>
                     <button 
                       onClick={() => handleWhatsAppQuote(type.name)}
-                      className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-base sm:text-lg touch-target"
                     >
                       <span>Get Quote</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
                   </div>
                 </motion.div>
