@@ -17,7 +17,8 @@ const ProductsPage = () => {
   const handleWhatsAppQuote = (productName?: string) => {
     const phoneNumber = "+919978728781";
     const message = productName 
-      ? `Hello! I'm interested in getting a quote for ${productName}. Please provide more information.`
+      ? `Hello! I'm interested in getting a quote for ${productName}. 
+      Please provide more information.`
       : "Hello! I'm interested in getting a quote for your products. Please provide more information.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
