@@ -11,7 +11,7 @@ const Header = () => {
 
   const handleWhatsAppQuote = () => {
     const phoneNumber = "+919978728781";
-    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const message = "Hello! I'm interested in your fresh fruit and vegetable export products. Please provide more information.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
@@ -93,7 +93,7 @@ const Header = () => {
                 <h1 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">
                   Auspira <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Overseas</span>
                 </h1>
-                <p className="text-xs sm:text-sm text-slate-600 leading-tight">Industrial Bulk Bag Suppliers</p>
+                <p className="text-xs sm:text-sm text-slate-600 leading-tight">Premium Fruit & Vegetable Exporter</p>
               </div>
               {/* Mobile Logo Text */}
               <div className="sm:hidden">

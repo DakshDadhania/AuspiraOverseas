@@ -11,31 +11,31 @@ const AboutSection = () => {
   });
 
   const stats = [
-    { number: "500+", label: "Happy Clients", icon: Users },
-    { number: "10K+", label: "Bags Delivered", icon: Factory },
-    { number: "25+", label: "Countries Served", icon: Truck },
+    { number: "500+", label: "Satisfied Clients", icon: Users },
+    { number: "25K+", label: "Tons Exported", icon: Factory },
+    { number: "30+", label: "Countries Served", icon: Truck },
     { number: "15+", label: "Years Experience", icon: Award },
   ];
 
   const whyChooseUs = [
     {
-      title: "Extra Strong & Durable",
-      description: "Our FIBC bags are manufactured with high-quality materials ensuring maximum strength and durability for heavy-duty applications.",
+      title: "Farm Fresh Quality",
+      description: "Our products are sourced directly from premium farms ensuring maximum freshness and nutritional value for international markets.",
       icon: Shield
     },
     {
-      title: "Leakproof Design",
-      description: "Advanced manufacturing techniques ensure our bags are completely leakproof, perfect for storing various materials safely.",
+      title: "Proper Cold Chain",
+      description: "Advanced cold storage and transportation systems maintain optimal freshness from farm to destination, preserving quality throughout.",
       icon: CheckCircle
     },
     {
-      title: "100% Biodegradable Options",
-      description: "We offer eco-friendly biodegradable garbage bags that decompose naturally, contributing to environmental sustainability.",
+      title: "Organic & Natural",
+      description: "We offer organically grown fruits, vegetables, and spices that are free from harmful chemicals and pesticides.",
       icon: Zap
     },
     {
       title: "Global Export Standards",
-      description: "All our products meet international quality standards and BEE compliance for global export requirements.",
+      description: "All our products meet international food safety standards and export quality requirements for global markets.",
       icon: Award
     }
   ];
@@ -54,8 +54,8 @@ const AboutSection = () => {
             About <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Auspira Overseas</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            A reputable manufacturer of bulk bags that complies with BEE standards, 
-            conducting business as Industrial Bulk Bag Suppliers with a commitment to excellence.
+            A trusted exporter of premium fresh fruits, vegetables, and spices, 
+            connecting quality Indian agricultural products to global markets with excellence and reliability.
           </p>
         </motion.div>
 
@@ -78,9 +78,9 @@ const AboutSection = () => {
               </div>
             </div>
             <p className="text-slate-600 text-lg leading-relaxed">
-              To become the global leader in manufacturing innovative, sustainable, and 
-              high-quality industrial packaging solutions that exceed customer expectations 
-              while contributing to environmental preservation through eco-friendly practices.
+              To become the leading global exporter of premium Indian agricultural products, 
+              connecting the finest farms to international markets while promoting sustainable 
+              farming practices and supporting local farming communities.
             </p>
           </motion.div>
 
@@ -101,9 +101,9 @@ const AboutSection = () => {
               </div>
             </div>
             <p className="text-slate-600 text-lg leading-relaxed">
-              To provide world-class FIBC bags and industrial packaging solutions through 
-              continuous innovation, ensuring export excellence and complete satisfaction 
-              for both international and Indian clients while maintaining the highest quality standards.
+              To provide world-class fresh fruits, vegetables, and spices through 
+              reliable supply chains, ensuring export excellence and complete satisfaction 
+              for international clients while maintaining the highest quality and freshness standards.
             </p>
           </motion.div>
         </div>
@@ -145,8 +145,8 @@ const AboutSection = () => {
             Why Choose <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Auspira Overseas</span>?
           </h3>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            We are dedicated to fostering strong, mutually beneficial relationships 
-            with our clientele through exceptional quality and service.
+            We are dedicated to providing the finest fresh produce and building 
+            lasting partnerships with clients worldwide through quality and reliability.
           </p>
         </motion.div>
 
@@ -182,18 +182,18 @@ const AboutSection = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              International Quality Standards
+              International Quality Agricultural Products
             </h3>
             <p className="text-xl leading-relaxed mb-8 text-slate-200">
-              Our flexible Intermediate Bulk Containers (FIBCs), also referred to as bulk bags, 
-              are composed of flexible woven polypropylene and offer a cost-effective and efficient 
-              way to package, store, and handle a variety of products. Our large industrial bags 
-              maximize storage capacity, lower transportation costs, and enhance flow control.
+              Our premium agricultural products including fresh pomegranates, aromatic turmeric fingers, 
+              quality onions, vibrant green chillies, and fragrant curry leaves are sourced from the finest 
+              farms and processed with international quality standards, ensuring maximum freshness and 
+              nutritional value for global markets.
             </p>
             <p className="text-lg leading-relaxed text-slate-300">
-              International quality requirements are followed in the production of our bulk bags, 
-              and we encourage inspection of the production line to ensure complete transparency 
-              and quality assurance.
+              International food safety requirements are followed in all our export operations, 
+              and we encourage inspection of our supply chain to ensure complete transparency 
+              and quality assurance for our global partners.
             </p>
           </div>
         </motion.div>

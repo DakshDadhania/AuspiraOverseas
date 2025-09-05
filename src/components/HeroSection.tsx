@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   const handleWhatsAppQuote = () => {
     const phoneNumber = "+919978728781";
-    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const message = "Hello! I'm interested in your fresh fruit and vegetable export products. Please provide more information.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
@@ -18,28 +18,28 @@ const HeroSection = () => {
   const slides = [
     {
       id: 1,
-      title: "Leading Manufacturer of FIBC Bags",
-      subtitle: "BEE Compliant Industrial Bulk Bag Solutions",
-      description: "We specialize in manufacturing high-quality FIBC bags, bulk bags, and industrial packaging solutions that meet international standards.",
-      image: "/images/hero-slide-1.jpg",
+      title: "Premium Fruit & Vegetable Exporter",
+      subtitle: "Fresh Quality Agricultural Products Worldwide",
+      description: "We specialize in exporting premium quality pomegranates, turmeric fingers, onions, green chillies, and curry leaves to global markets with uncompromising freshness.",
+      image: "/images/hero-slide-1.jpg", // TODO: Replace with fresh pomegranate/mixed fruits hero image
       cta: "Explore Products",
       ctaLink: "/products"
     },
     {
       id: 2,
-      title: "Global Export Excellence",
-      subtitle: "Trusted Worldwide for Quality & Reliability",
-      description: "Our flexible Intermediate Bulk Containers (FIBCs) offer cost-effective packaging solutions for diverse industries across the globe.",
-      image: "/images/hero-slide-2.png",
+      title: "Global Agricultural Trading Excellence",
+      subtitle: "Trusted Worldwide for Fresh Produce",
+      description: "Our fresh agricultural products reach international markets with guaranteed quality, proper packaging, and timely delivery ensuring maximum freshness.",
+      image: "/images/hero-slide-2.png", // TODO: Replace with global export/shipping fresh produce image
       cta: "Learn More",
       ctaLink: "/about"
     },
     {
       id: 3,
-      title: "Sustainable Packaging Solutions",
-      subtitle: "Biodegradable Garbage Bags & Eco-Friendly Options",
-      description: "Committed to environmental responsibility with our range of biodegradable garbage bags and sustainable packaging solutions.",
-      image: "/images/hero-slide-3.jpg",
+      title: "Farm Fresh to Global Markets",
+      subtitle: "Quality Spices, Vegetables & Fruits",
+      description: "From carefully selected farms to international markets, we ensure the highest quality standards in every shipment of fresh produce and spices.",
+      image: "/images/hero-slide-3.jpg", // TODO: Replace with farm fresh vegetables/spices collection image
       cta: "Contact Us",
       ctaLink: "/contact"
     }
@@ -48,18 +48,18 @@ const HeroSection = () => {
   const features = [
     {
       icon: Shield,
-      title: "BEE Compliant",
-      description: "All products meet international quality standards"
+      title: "Quality Assured",
+      description: "Premium grade fresh produce with quality certifications"
     },
     {
       icon: Globe,
       title: "Global Export",
-      description: "Serving clients worldwide with reliable delivery"
+      description: "Serving international markets with reliable delivery"
     },
     {
       icon: Award,
-      title: "Quality Assured",
-      description: "ISO certified manufacturing processes"
+      title: "Farm Fresh",
+      description: "Directly sourced from certified organic farms"
     }
   ];
 

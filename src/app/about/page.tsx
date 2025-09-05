@@ -15,7 +15,7 @@ const AboutPage = () => {
 
   const handleWhatsAppQuote = () => {
     const phoneNumber = "+919978728781";
-    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const message = "Hello! I'm interested in your fresh fruit and vegetable export products. Please provide more information.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
@@ -23,47 +23,47 @@ const AboutPage = () => {
   const stats = [
     { number: "15+", label: "Years of Excellence", icon: Award },
     { number: "500+", label: "Satisfied Clients", icon: Users },
-    { number: "10K+", label: "Bags Delivered", icon: Factory },
-    { number: "25+", label: "Countries Served", icon: Globe },
+    { number: "25K+", label: "Tons Exported", icon: Factory },
+    { number: "30+", label: "Countries Served", icon: Globe },
   ];
 
   const milestones = [
-    { title: "Company Founded", description: "Auspira Overseas was established with a vision to provide quality industrial packaging solutions." },
-    { title: "BEE Certification", description: "Achieved BEE compliance and international quality certifications for our manufacturing processes." },
-    { title: "Global Expansion", description: "Started exporting to international markets, serving clients across multiple continents." },
-    { title: "Eco-Initiative", description: "Launched biodegradable product line, contributing to environmental sustainability." },
-    { title: "Digital Transformation", description: "Modernized operations with digital processes and enhanced quality control systems." }
+    { title: "Company Founded", description: "Auspira Overseas was established with a vision to provide premium agricultural products to global markets." },
+    { title: "Export Certification", description: "Achieved international food safety certifications and quality standards for agricultural export operations." },
+    { title: "Global Expansion", description: "Started exporting to international markets, serving clients across multiple continents with fresh produce." },
+    { title: "Premium Product Range", description: "Expanded product portfolio to include pomegranates, turmeric fingers, onions, green chillies, and curry leaves." },
+    { title: "Quality Excellence", description: "Modernized operations with advanced cold storage and enhanced quality control systems for maximum freshness." }
   ];
 
   const values = [
     {
       title: "Quality Excellence",
-      description: "We maintain the highest standards in manufacturing, ensuring every product meets international quality requirements.",
+      description: "We maintain the highest standards in sourcing and processing, ensuring every product meets international quality requirements.",
       icon: Shield
     },
     {
-      title: "Innovation",
-      description: "Continuous innovation in product design and manufacturing processes to meet evolving market demands.",
+      title: "Freshness Guaranteed",
+      description: "Advanced cold chain management and proper handling techniques to preserve maximum freshness and nutritional value.",
       icon: Zap
     },
     {
       title: "Customer Focus",
-      description: "Building long-term relationships with clients through exceptional service and tailored solutions.",
+      description: "Building long-term relationships with clients through exceptional service and reliable supply chain management.",
       icon: Users
     },
     {
       title: "Sustainability",
-      description: "Committed to environmental responsibility through eco-friendly materials and sustainable practices.",
+      description: "Committed to sustainable farming practices and supporting local farmers while maintaining environmental responsibility.",
       icon: Globe
     },
     {
       title: "Reliability",
-      description: "Consistent delivery of high-quality products on time, every time, building trust with our partners.",
+      description: "Consistent delivery of high-quality fresh produce on time, every time, building trust with our global partners.",
       icon: CheckCircle
     },
     {
       title: "Global Reach",
-      description: "Serving clients worldwide with efficient logistics and comprehensive export capabilities.",
+      description: "Serving international markets worldwide with efficient logistics and comprehensive export capabilities.",
       icon: Truck
     }
   ];
@@ -85,8 +85,8 @@ const AboutPage = () => {
                 About <span className="text-blue-200">Auspira Overseas</span>
               </h1>
               <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
-                Leading the industry in manufacturing high-quality FIBC bags and industrial packaging solutions 
-                with over 15 years of excellence and innovation.
+                Leading exporter of premium fresh fruits, vegetables, and spices with over 15 years 
+                of excellence in connecting quality agricultural products to global markets.
               </p>
             </motion.div>
           </div>
@@ -136,9 +136,9 @@ const AboutPage = () => {
                   </div>
                 </div>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  To become the global leader in manufacturing innovative, sustainable, and high-quality 
-                  industrial packaging solutions that exceed customer expectations while contributing to 
-                  environmental preservation through eco-friendly practices and cutting-edge technology.
+                  To become the leading global exporter of premium Indian agricultural products, 
+                  connecting the finest farms to international markets while promoting sustainable 
+                  farming practices and supporting local farming communities worldwide.
                 </p>
               </motion.div>
 
@@ -159,10 +159,9 @@ const AboutPage = () => {
                   </div>
                 </div>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  To provide world-class FIBC bags and industrial packaging solutions through continuous 
-                  innovation, ensuring export excellence and complete satisfaction for both international 
-                  and Indian clients while maintaining the highest quality standards and fostering 
-                  sustainable growth.
+                  To provide world-class fresh fruits, vegetables, and spices through 
+                  reliable supply chains, ensuring export excellence and complete satisfaction 
+                  for international clients while maintaining the highest quality and freshness standards.
                 </p>
               </motion.div>
             </div>
@@ -182,7 +181,7 @@ const AboutPage = () => {
                 Our <span className="text-gradient">Journey</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                A timeline of growth, innovation, and excellence in industrial packaging solutions
+                A timeline of growth, innovation, and excellence in agricultural export solutions
               </p>
             </motion.div>
 
@@ -230,7 +229,7 @@ const AboutPage = () => {
                 Our <span className="text-gradient">Core Values</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                The principles that guide our operations and define our commitment to excellence
+                The principles that guide our operations and define our commitment to agricultural excellence
               </p>
             </motion.div>
 
@@ -254,7 +253,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Manufacturing Excellence */}
+        {/* Agricultural Excellence */}
         <section className="section-padding bg-white">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -264,20 +263,20 @@ const AboutPage = () => {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Manufacturing <span className="text-gradient">Excellence</span>
+                  Agricultural <span className="text-gradient">Excellence</span>
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Our state-of-the-art manufacturing facility is equipped with modern machinery and 
-                  follows stringent quality control processes to ensure every product meets international standards.
+                  Our state-of-the-art processing and cold storage facilities are equipped with modern technology 
+                  and follow stringent quality control processes to ensure every product meets international standards.
                 </p>
                 
                 <div className="space-y-4">
                   {[
-                    "ISO certified manufacturing processes",
-                    "Advanced quality control systems",
-                    "Skilled workforce with expertise",
-                    "Eco-friendly production methods",
-                    "Regular facility inspections welcome"
+                    "International food safety certified operations",
+                    "Advanced cold chain management systems",
+                    "Skilled workforce with agricultural expertise",
+                    "Sustainable and eco-friendly practices",
+                    "Regular quality inspections and audits"
                   ].map((feature, index) => (
                     <motion.div
                       key={feature}
@@ -300,9 +299,10 @@ const AboutPage = () => {
                 className="relative"
               >
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  {/* TODO: Replace with agricultural processing/facility image */}
                   <img 
-                    src="/images/factory-image.jpg" 
-                    alt="Auspira Overseas Manufacturing Facility"
+                    src="/images/agricultural-facility.jpg" 
+                    alt="Auspira Overseas Agricultural Processing Facility"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -325,7 +325,7 @@ const AboutPage = () => {
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
                 Join hundreds of satisfied clients who trust Auspira Overseas for their 
-                industrial packaging needs. Let's build a successful partnership together.
+                fresh produce needs. Let's build a successful partnership together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button

@@ -16,7 +16,7 @@ const ContactPage = () => {
 
   const handleWhatsAppQuote = () => {
     const phoneNumber = "+919978728781";
-    const message = "Hello! I'm interested in getting a quote for your products. Please provide more information.";
+    const message = "Hello! I'm interested in your fresh fruit and vegetable export products. Please provide more information.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
@@ -73,7 +73,7 @@ const ContactPage = () => {
 
   const offices = [
     {
-      title: "Head Office & Manufacturing",
+      title: "Head Office & Export Division",
       address: "Shop No. 6 Above, Second Floor, Survey No.732/1P, Plot No.334P, Laxminarayan Complex, Latipar Chokdi, Nr. Tankara Bus Stand, Tankara, Morbi, Gujarat - 363650",
       phone: "+91 99787 28781",
       email: "auspiraoverseas10@gmail.com",
@@ -108,8 +108,8 @@ const ContactPage = () => {
                 Get In <span className="text-blue-200">Touch</span>
               </h1>
               <p className="body-lg max-w-3xl mx-auto leading-relaxed">
-                Ready to discuss your packaging needs? Contact us today for customized solutions, 
-                bulk pricing, and expert consultation.
+                Ready to discuss your fresh produce needs? Contact us today for premium agricultural products, 
+                bulk pricing, and expert consultation for international markets.
               </p>
             </motion.div>
           </div>
@@ -128,7 +128,7 @@ const ContactPage = () => {
                 Contact <span className="text-gradient">Information</span>
               </h2>
               <p className="body-lg text-gray-600 max-w-2xl mx-auto px-4">
-                Multiple ways to reach us for all your industrial packaging requirements
+                Multiple ways to reach us for all your fresh produce export requirements
               </p>
             </motion.div>
 
@@ -168,7 +168,7 @@ const ContactPage = () => {
               >
                 <h3 className="heading-md text-gray-900 mb-4 sm:mb-6">Send us a Message</h3>
                 <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
-                  Fill out the form below and we'll get back to you within 24 hours with a detailed response.
+                  Fill out the form below and we'll get back to you within 24 hours with a detailed response about our fresh produce.
                 </p>
 
                 <form action="https://formspree.io/f/movwwakp" method="POST" className="mobile-spacing">
@@ -264,11 +264,12 @@ const ContactPage = () => {
                         className="form-input"
                       >
                         <option value="">Select a product</option>
-                        <option value="fibc-bags">FIBC Bags</option>
-                        <option value="garbage-bags">Biodegradable Garbage Bags</option>
-                        <option value="garbage-bags">Garbage Bag</option>
-                        <option value="custom-solutions">Custom Solutions</option>
-                        <option value="bulk-order">Bulk Order</option>
+                        <option value="pomegranates">Premium Pomegranates</option>
+                        <option value="turmeric-fingers">Turmeric Fingers</option>
+                        <option value="fresh-onions">Fresh Onions</option>
+                        <option value="green-chillies">Green Chillies</option>
+                        <option value="curry-leaves">Curry Leaves</option>
+                        <option value="bulk-order">Bulk Mixed Order</option>
                       </select>
                     </div>
 
@@ -302,7 +303,7 @@ const ContactPage = () => {
                         onChange={handleInputChange}
                         required
                         className="form-textarea pl-10 sm:pl-12"
-                        placeholder="Tell us about your requirements, quantity, specifications, or any questions you have..."
+                        placeholder="Tell us about your requirements, quantities needed, destination country, or any questions about our fresh produce..."
                       />
                     </div>
                   </div>
@@ -391,7 +392,7 @@ const ContactPage = () => {
                 Frequently Asked <span className="text-gradient">Questions</span>
               </h2>
               <p className="body-lg text-gray-600 max-w-2xl mx-auto px-4">
-                Quick answers to common questions about our products and services
+                Quick answers to common questions about our fresh produce and export services
               </p>
             </motion.div>
 
@@ -399,27 +400,27 @@ const ContactPage = () => {
               {[
                 {
                   question: "What is the minimum order quantity?",
-                  answer: "Our minimum order quantity varies by product type. For FIBC bags, it's typically 5000 pieces, while for garbage bags, it starts from 1000 pieces."
+                  answer: "Our minimum order quantity varies by product type. For pomegranates, it's typically 5 tons, while for spices like turmeric fingers, it starts from 1 ton."
                 },
                 {
-                  question: "Do you offer custom designs?",
-                  answer: "Yes, we offer complete customization including size, printing, colors, and specifications to meet your exact requirements."
+                  question: "Do you offer organic certified products?",
+                  answer: "Yes, we offer organic certified options for most of our products including pomegranates, turmeric fingers, and other fresh produce upon request."
                 },
                 {
-                  question: "Are your products BEE compliant?",
-                  answer: "Yes, all our products are manufactured according to BEE standards and international quality certifications."
+                  question: "Are your products export quality certified?",
+                  answer: "Yes, all our products are processed according to international food safety standards and export quality certifications for global markets."
                 },
                 {
                   question: "Do you provide samples?",
-                  answer: "Yes, we provide free samples for evaluation. Shipping charges may apply for international sample requests."
+                  answer: "Yes, we provide samples for evaluation before bulk orders. Shipping charges may apply for international sample requests."
                 },
                 {
-                  question: "What payment methods do you accept?",
-                  answer: "We accept various payment methods including bank transfers, letters of credit, and other secure payment options for international trade."
+                  question: "What packaging options are available?",
+                  answer: "We offer various packaging options including ventilated cartons, jute bags, and custom packaging solutions based on your specific requirements and destination."
                 },
                 {
-                  question: "Can I visit your manufacturing facility?",
-                  answer: "Yes, we welcome facility visits. Please contact us in advance to schedule a tour of our manufacturing unit in Tankara, Morbi."
+                  question: "Can I visit your processing facility?",
+                  answer: "Yes, we welcome facility visits from potential clients. Please contact us in advance to schedule a tour of our processing and cold storage facilities."
                 }
               ].map((faq, index) => (
                 <motion.div
@@ -450,8 +451,8 @@ const ContactPage = () => {
                 Ready to Start Your Order?
               </h2>
               <p className="body-lg mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
-                Get in touch with our expert team for personalized consultation, 
-                competitive pricing, and reliable delivery solutions.
+                Get in touch with our export team for personalized consultation, 
+                competitive pricing, and reliable delivery solutions for fresh produce.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
                 <button 

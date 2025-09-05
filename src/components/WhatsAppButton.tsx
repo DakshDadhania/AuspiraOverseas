@@ -7,7 +7,7 @@ import { MessageCircle, X } from "lucide-react";
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const phoneNumber = "+919978728781"; // Updated WhatsApp number
-  const defaultMessage = "Hello! I'm interested in your bulk bag products. Please provide more information.";
+  const defaultMessage = "Hello! I'm interested in your fresh fruit and vegetable export products. Please provide more information.";
 
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
@@ -16,20 +16,20 @@ const WhatsAppButton = () => {
 
   const quickMessages = [
     {
-      title: "FIBC Bags Inquiry",
-      message: "Hi! I need information about FIBC bags. Can you help me with specifications and pricing?"
+      title: "Pomegranate Export Inquiry",
+      message: "Hi! I need information about premium pomegranates. Can you help me with specifications, pricing and availability?"
     },
     {
       title: "Bulk Order Quote",
-      message: "Hello! I need a quote for bulk order. Please contact me with details."
+      message: "Hello! I need a quote for bulk fresh produce order. Please contact me with details and pricing."
     },
     {
-      title: "Custom Solutions",
-      message: "Hi! I need custom packaging solutions. Can we discuss my requirements?"
+      title: "Mixed Products Order",
+      message: "Hi! I'm interested in multiple products - pomegranates, turmeric fingers, onions. Can we discuss requirements?"
     },
     {
-      title: "Product Catalog",
-      message: "Hello! Can you please send me your complete product catalog?"
+      title: "Export Information",
+      message: "Hello! Can you please provide information about your export process and fresh produce catalog?"
     }
   ];
 

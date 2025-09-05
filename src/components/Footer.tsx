@@ -13,10 +13,12 @@ const Footer = () => {
   ];
 
   const products = [
-    { name: "FIBC Bags", href: "/products/fibc-bags" },
-    { name: "Garbage Bags", href: "/products/garbage-bags" },
-    { name: "Garbage Bag", href: "/products/garbage-bags" },
-    { name: "Custom Solutions", href: "/contact" },
+    { name: "Premium Pomegranates", href: "/products" },
+    { name: "Turmeric Fingers", href: "/products" },
+    { name: "Fresh Onions", href: "/products" },
+    { name: "Green Chillies", href: "/products" },
+    { name: "Curry Leaves", href: "/products" },
+    { name: "Bulk Orders", href: "/contact" },
   ];
 
   const socialLinks = [
@@ -72,12 +74,12 @@ const Footer = () => {
                 <h3 className="text-xl sm:text-2xl font-bold leading-tight">
                   Auspira <span className="text-blue-400">Overseas</span>
                 </h3>
-                <p className="text-gray-400 text-xs sm:text-sm">Industrial Bulk Bag Suppliers</p>
+                <p className="text-gray-400 text-xs sm:text-sm">Premium Fruit & Vegetable Exporter</p>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-              Leading manufacturer of high-quality FIBC bags, bulk bags, and industrial packaging 
-              solutions. Committed to excellence in quality, sustainability, and customer satisfaction.
+              Leading exporter of premium fresh fruits, vegetables, and spices including pomegranates, 
+              turmeric fingers, onions, green chillies, and curry leaves to global markets.
             </p>
             
             {/* Social Links */}
@@ -180,7 +182,7 @@ const Footer = () => {
           <div className="bg-blue-600/10 rounded-2xl p-6 sm:p-8 text-center">
             <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Stay Updated</h4>
             <p className="text-gray-300 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base">
-              Subscribe to our newsletter for the latest updates on products, industry news, and special offers.
+              Subscribe to our newsletter for the latest updates on fresh produce availability, seasonal offers, and export opportunities.
             </p>
             <form 
               action="https://formspree.io/f/movwwakp"
