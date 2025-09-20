@@ -87,18 +87,18 @@ const Header = () => {
                   alt="Auspira Overseas Logo"
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain shadow-lg group-hover:shadow-xl transition-shadow duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-700/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">
-                  Auspira <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Overseas</span>
+                  Auspira <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Overseas</span>
                 </h1>
                 <p className="text-xs sm:text-sm text-slate-600 leading-tight">Premium Fruit & Vegetable Exporter</p>
               </div>
               {/* Mobile Logo Text */}
               <div className="sm:hidden">
                 <h1 className="text-lg font-bold text-slate-900 leading-tight">
-                  Auspira <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Overseas</span>
+                  Auspira <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Overseas</span>
                 </h1>
               </div>
             </Link>
@@ -109,10 +109,10 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2 px-3 rounded-lg group focus-ring"
+                  className="relative text-slate-700 hover:text-green-600 font-medium transition-colors duration-300 py-2 px-3 rounded-lg group focus-ring"
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-700 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-emerald-600 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
             </nav>
@@ -159,11 +159,11 @@ const Header = () => {
                   <div className="md:hidden mb-4 p-4 bg-slate-50 rounded-xl">
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center space-x-2">
-                        <Phone className="w-4 h-4 text-blue-600" />
+                        <Phone className="w-4 h-4 text-green-600" />
                         <span className="text-slate-700">+91 99787 28781</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Mail className="w-4 h-4 text-blue-600" />
+                        <Mail className="w-4 h-4 text-green-600" />
                         <span className="text-slate-700">sales@auspiraoverseas.in</span>
                       </div>
                     </div>
@@ -181,7 +181,7 @@ const Header = () => {
                         <Link
                           href={item.href}
                           onClick={handleMobileLinkClick}
-                          className="block text-slate-700 hover:text-blue-600 font-medium py-3 px-4 rounded-xl hover:bg-slate-50 transition-all duration-300 touch-target focus-ring"
+                          className="block text-slate-700 hover:text-green-600 font-medium py-3 px-4 rounded-xl hover:bg-slate-50 transition-all duration-300 touch-target focus-ring"
                         >
                           {item.name}
                         </Link>

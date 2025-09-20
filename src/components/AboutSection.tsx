@@ -51,7 +51,7 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            About <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Auspira Overseas</span>
+            About <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Auspira Overseas</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             A trusted exporter of premium fresh fruits, vegetables, and spices, 
@@ -69,12 +69,12 @@ const AboutSection = () => {
             className="glass-card rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300"
           >
             <div className="flex items-center space-x-4 mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
                 <Target className="w-8 h-8 text-white" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-slate-900">Our Vision</h3>
-                <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full mt-2"></div>
+                <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mt-2"></div>
               </div>
             </div>
             <p className="text-slate-600 text-lg leading-relaxed">
@@ -124,7 +124,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.05 }}
                 className="text-center group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-slate-900 mb-2">{stat.number}</div>
@@ -142,7 +142,7 @@ const AboutSection = () => {
           className="text-center mb-12"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Why Choose <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Auspira Overseas</span>?
+            Why Choose <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Auspira Overseas</span>?
           </h3>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             We are dedicated to providing the finest fresh produce and building 
@@ -160,7 +160,7 @@ const AboutSection = () => {
               className="glass-card rounded-xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-200"
             >
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -179,7 +179,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-white mt-20 relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
               International Quality Agricultural Products

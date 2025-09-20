@@ -95,7 +95,7 @@ const ContactPage = () => {
       <Header />
       <main className="pt-32 md:pt-40">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-blue-700 to-blue-800 text-white overflow-hidden">
+        <section className="relative bg-gradient-to-r from-green-500 to-emerald-600 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative container-custom section-padding text-center safe-top">
             <motion.div
@@ -105,7 +105,7 @@ const ContactPage = () => {
               className="px-4"
             >
               <h1 className="heading-xl mb-4 sm:mb-6">
-                Get In <span className="text-blue-200">Touch</span>
+                Get In <span className="text-green-200">Touch</span>
               </h1>
               <p className="body-lg max-w-3xl mx-auto leading-relaxed">
                 Ready to discuss your fresh produce needs? Contact us today for premium agricultural products, 
@@ -141,8 +141,8 @@ const ContactPage = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="glass-card p-6 sm:p-8 text-center card-hover"
                 >
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                    <info.icon className="w-6 h-6 sm:w-8 sm:h-8 text-blue-700" />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                    <info.icon className="w-6 h-6 sm:w-8 sm:h-8 text-green-700" />
                   </div>
                   <h3 className="heading-sm text-gray-900 mb-3 sm:mb-4">{info.title}</h3>
                   {info.details.map((detail, idx) => (
@@ -355,19 +355,19 @@ const ContactPage = () => {
                       <h4 className="heading-sm text-gray-900 mb-3 sm:mb-4">{office.title}</h4>
                       <div className="mobile-spacing text-gray-600 text-sm sm:text-base">
                         <div className="flex items-start space-x-3">
-                          <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                          <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
                           <span className="leading-relaxed">{office.address}</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0" />
+                          <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" />
                           <span>{office.phone}</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0" />
+                          <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" />
                           <span className="break-all">{office.email}</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0" />
+                          <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" />
                           <span>{office.hours}</span>
                         </div>
                       </div>
@@ -439,7 +439,7 @@ const ContactPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-r from-blue-700 to-blue-800 text-white">
+        <section className="section-padding bg-gradient-to-r from-green-500 to-emerald-600 text-white">
           <div className="container-custom text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -457,13 +457,13 @@ const ContactPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
                 <button 
                   onClick={handleWhatsAppQuote}
-                  className="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 touch-target focus-ring"
+                  className="bg-white text-green-700 hover:bg-green-50 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 touch-target focus-ring"
                 >
                   Request Quote
                 </button>
                 <button 
                   onClick={handleWhatsAppQuote}
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl touch-target focus-ring"
+                  className="border-2 border-white text-white hover:bg-white hover:text-green-700 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl touch-target focus-ring"
                 >
                   Schedule Call
                 </button>

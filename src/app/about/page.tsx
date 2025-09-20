@@ -73,7 +73,7 @@ const AboutPage = () => {
       <Header />
       <main className="pt-32 md:pt-40">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-blue-700 to-blue-800 text-white overflow-hidden">
+        <section className="relative bg-gradient-to-r from-green-500 to-emerald-600 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative container-custom section-padding text-center">
             <motion.div
@@ -82,7 +82,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                About <span className="text-blue-200">Auspira Overseas</span>
+                About <span className="text-green-200">Auspira Overseas</span>
               </h1>
               <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
                 Leading exporter of premium fresh fruits, vegetables, and spices with over 15 years 
@@ -104,8 +104,8 @@ const AboutPage = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center bg-gray-50 rounded-2xl p-8 card-hover"
                 >
-                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="w-8 h-8 text-blue-700" />
+                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="w-8 h-8 text-green-700" />
                   </div>
                   <div className="text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -127,12 +127,12 @@ const AboutPage = () => {
                 className="bg-white rounded-2xl p-8 shadow-lg card-hover"
               >
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <Target className="w-8 h-8 text-blue-700" />
+                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center">
+                    <Target className="w-8 h-8 text-green-700" />
                   </div>
                   <div>
                     <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
-                    <div className="w-12 h-1 bg-blue-700 rounded-full mt-2"></div>
+                    <div className="w-12 h-1 bg-green-600 rounded-full mt-2"></div>
                   </div>
                 </div>
                 <p className="text-gray-600 text-lg leading-relaxed">
@@ -206,7 +206,7 @@ const AboutPage = () => {
                     </div>
                     
                     {/* Timeline Dot */}
-                    <div className="hidden md:flex w-4 h-4 bg-blue-700 rounded-full border-4 border-blue-200 flex-shrink-0 z-10"></div>
+                    <div className="hidden md:flex w-4 h-4 bg-green-600 rounded-full border-4 border-green-200 flex-shrink-0 z-10"></div>
                     
                     <div className="w-full md:w-1/2"></div>
                   </motion.div>
@@ -242,8 +242,8 @@ const AboutPage = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg card-hover"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <value.icon className="w-6 h-6 text-blue-700" />
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <value.icon className="w-6 h-6 text-green-700" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{value.description}</p>
@@ -313,7 +313,7 @@ const AboutPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-r from-blue-700 to-blue-800 text-white">
+        <section className="section-padding bg-gradient-to-r from-green-500 to-emerald-600 text-white">
           <div className="container-custom text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -330,13 +330,13 @@ const AboutPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={handleWhatsAppQuote}
-                  className="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="bg-white text-green-700 hover:bg-green-50 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Request Quote
                 </button>
                 <a
                   href="/products"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="border-2 border-white text-white hover:bg-white hover:text-green-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   View Products
                 </a>

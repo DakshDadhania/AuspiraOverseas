@@ -122,7 +122,7 @@ const ProductsPage = () => {
       <Header />
       <main className="pt-32 md:pt-40">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-blue-700 to-blue-800 text-white overflow-hidden">
+        <section className="relative bg-gradient-to-r from-green-500 to-emerald-600 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative container-custom section-padding text-center">
             <motion.div
@@ -131,7 +131,7 @@ const ProductsPage = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                Our <span className="text-blue-200">Premium Products</span>
+                Our <span className="text-green-200">Premium Products</span>
               </h1>
               <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
                 Fresh fruits, vegetables, and spices sourced from the finest farms 
@@ -178,7 +178,7 @@ const ProductsPage = () => {
                     <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                       {product.title}
                     </h3>
-                    <p className="text-xl text-blue-600 font-medium mb-6">{product.subtitle}</p>
+                    <p className="text-xl text-green-600 font-medium mb-6">{product.subtitle}</p>
                     <p className="text-gray-600 text-lg leading-relaxed mb-8">{product.description}</p>
 
                     {/* Features */}
@@ -220,7 +220,7 @@ const ProductsPage = () => {
                       </button>
                       <button 
                         onClick={() => handleWhatsAppQuote(product.title)}
-                        className="inline-flex items-center space-x-2 border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                        className="inline-flex items-center space-x-2 border-2 border-gray-300 text-gray-700 hover:border-green-500 hover:text-green-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
                       >
                         <Eye className="w-5 h-5" />
                         <span>Get Details</span>
@@ -231,12 +231,10 @@ const ProductsPage = () => {
                   {/* Image */}
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                     <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                      <div 
-                        className="aspect-[4/3] h-80 sm:h-80 md:h-96 bg-cover bg-center"
-                        style={{ 
-                          backgroundImage: `url('${product.image}')`,
-                          backgroundPosition: 'center center'
-                        }}
+                      <img 
+                        src={product.image}
+                        alt={product.title}
+                        className="aspect-[4/3] h-80 sm:h-80 md:h-96 w-full object-cover object-center"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                     </div>
@@ -306,7 +304,7 @@ const ProductsPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="relative"
               >
-                <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 text-center">
+                <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-8 text-center">
                   <div className="text-6xl mb-4">🏆</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Quality Assured</h3>
                   <p className="text-gray-600 leading-relaxed">
@@ -320,7 +318,7 @@ const ProductsPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-r from-blue-700 to-blue-800 text-white">
+        <section className="section-padding bg-gradient-to-r from-green-500 to-emerald-600 text-white">
           <div className="container-custom text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -337,13 +335,13 @@ const ProductsPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => handleWhatsAppQuote()}
-                  className="bg-white text-blue-700 hover:bg-blue-50 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="bg-white text-green-700 hover:bg-green-50 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Request Quote
                 </button>
                 <Link 
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                  className="border-2 border-white text-white hover:bg-white hover:text-green-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
                 >
                   <span>Contact Us</span>
                 </Link>

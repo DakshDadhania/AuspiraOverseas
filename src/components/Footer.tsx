@@ -72,7 +72,7 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold leading-tight">
-                  Auspira <span className="text-blue-400">Overseas</span>
+                  Auspira <span className="text-green-400">Overseas</span>
                 </h3>
                 <p className="text-gray-400 text-xs sm:text-sm">Premium Fruit & Vegetable Exporter</p>
               </div>
@@ -88,7 +88,7 @@ const Footer = () => {
                 <Link
                   key={social.name}
                   href={social.href}
-                  className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300 touch-target focus-ring"
+                  className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-300 touch-target focus-ring"
                   aria-label={social.name}
                 >
                   <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -110,7 +110,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center space-x-2 group py-1 focus-ring rounded text-sm sm:text-base"
+                    className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center space-x-2 group py-1 focus-ring rounded text-sm sm:text-base"
                   >
                     <span className="w-1 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-2"></span>
                     <span>{link.name}</span>
@@ -133,7 +133,7 @@ const Footer = () => {
                 <li key={product.name}>
                   <Link
                     href={product.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center space-x-2 group py-1 focus-ring rounded text-sm sm:text-base"
+                    className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center space-x-2 group py-1 focus-ring rounded text-sm sm:text-base"
                   >
                     <span className="w-1 h-1 bg-blue-400 rounded-full transition-all duration-300 group-hover:w-2"></span>
                     <span>{product.name}</span>
@@ -154,8 +154,8 @@ const Footer = () => {
             <div className="space-y-4 sm:space-y-6">
               {contactInfo.map((info) => (
                 <div key={info.title} className="flex items-start space-x-3">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                    <info.icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-600/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <info.icon className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
                   </div>
                   <div>
                     <h5 className="font-semibold text-white mb-1 text-sm sm:text-base">{info.title}</h5>
@@ -179,7 +179,7 @@ const Footer = () => {
         className="border-t border-gray-800"
       >
         <div className="container-custom py-6 sm:py-8">
-          <div className="bg-blue-600/10 rounded-2xl p-6 sm:p-8 text-center">
+          <div className="bg-green-600/10 rounded-2xl p-6 sm:p-8 text-center">
             <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Stay Updated</h4>
             <p className="text-gray-300 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base">
               Subscribe to our newsletter for the latest updates on fresh produce availability, seasonal offers, and export opportunities.
@@ -194,7 +194,7 @@ const Footer = () => {
                 name="email"
                 placeholder="Enter your email"
                 required
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 text-sm sm:text-base touch-target"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-500 text-white placeholder-gray-400 text-sm sm:text-base touch-target"
               />
               <input type="hidden" name="form_type" value="newsletter" />
               <button type="submit" className="btn-primary px-6 sm:px-8 whitespace-nowrap">
@@ -213,13 +213,13 @@ const Footer = () => {
               © 2024 Auspira Overseas. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6 text-xs sm:text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 focus-ring rounded px-1 py-1">
+              <Link href="/privacy" className="text-gray-400 hover:text-green-400 transition-colors duration-300 focus-ring rounded px-1 py-1">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 focus-ring rounded px-1 py-1">
+              <Link href="/terms" className="text-gray-400 hover:text-green-400 transition-colors duration-300 focus-ring rounded px-1 py-1">
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 focus-ring rounded px-1 py-1">
+              <Link href="/sitemap" className="text-gray-400 hover:text-green-400 transition-colors duration-300 focus-ring rounded px-1 py-1">
                 Sitemap
               </Link>
             </div>

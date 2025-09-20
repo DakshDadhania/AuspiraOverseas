@@ -129,7 +129,7 @@ const ProductsSection = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="heading-lg mb-4 sm:mb-6 text-slate-900">
-            Our <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Premium Products</span>
+            Our <span className="bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Premium Products</span>
           </h2>
           <p className="body-lg text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
             Fresh fruits, vegetables, and spices sourced from the finest farms 
@@ -149,12 +149,12 @@ const ProductsSection = () => {
             >
               {/* Image Section */}
               <div className="relative overflow-hidden h-80 sm:h-72 md:h-80 lg:h-72">
-                <div 
-                  className="w-full h-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-                  style={{ 
-                    backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('${product.image}')`
-                  }}
+                <img 
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-transparent"></div>
                 <div className={`absolute top-4 left-4 w-14 h-14 sm:w-14 sm:h-14 bg-gradient-to-r ${product.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
                   <product.icon className="w-7 h-7 sm:w-7 sm:h-7 text-white" />
                 </div>
@@ -163,7 +163,7 @@ const ProductsSection = () => {
               {/* Content Section */}
               <div className="p-8 sm:p-7 lg:p-8">
                 <h3 className="heading-sm text-slate-900 mb-3">{product.title}</h3>
-                <p className="text-blue-600 font-medium mb-4 text-base sm:text-lg">{product.subtitle}</p>
+                <p className="text-green-600 font-medium mb-4 text-base sm:text-lg">{product.subtitle}</p>
                 <p className="text-slate-600 mb-6 leading-relaxed text-base sm:text-lg">{product.description}</p>
 
                 {/* Features */}
@@ -182,7 +182,7 @@ const ProductsSection = () => {
                 {/* CTA Button */}
                 <Link 
                   href="/products"
-                  className={`group/btn inline-flex items-center justify-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 w-full touch-target focus-ring text-base sm:text-lg`}
+                  className={`group/btn inline-flex items-center justify-center space-x-2 bg-gradient-to-r ${product.gradient} text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25 w-full touch-target focus-ring text-base sm:text-lg`}
                 >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -200,7 +200,7 @@ const ProductsSection = () => {
           className="text-center mt-12 sm:mt-16"
         >
           <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-6 sm:p-8 lg:p-12 text-white relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20"></div>
             <div className="relative z-10">
               <h3 className="heading-md mb-4 sm:mb-6">
                 Need Bulk Orders?
