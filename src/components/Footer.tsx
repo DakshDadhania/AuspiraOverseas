@@ -32,7 +32,7 @@ const Footer = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 99787 28781", "Owner: Shubh Fefar"]
+      details: ["+91 99787 28781", "Owner: Shubh Fefar", "+91 97376 60563", "Partner: Ronak Bhatia"]
     },
     {
       icon: Mail,

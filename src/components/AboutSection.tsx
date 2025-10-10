@@ -11,10 +11,10 @@ const AboutSection = () => {
   });
 
   const stats = [
-    { number: "500+", label: "Satisfied Clients", icon: Users },
-    { number: "25K+", label: "Tons Exported", icon: Factory },
-    { number: "30+", label: "Countries Served", icon: Truck },
-    { number: "15+", label: "Years Experience", icon: Award },
+    { number: "55+", label: "Satisfied Clients", icon: Users },
+    { number: "4K+", label: "Tons Exported", icon: Factory },
+    { number: "10+", label: "Countries Served", icon: Truck },
+    { number: "5+", label: "Years Experience", icon: Award },
   ];
 
   const whyChooseUs = [

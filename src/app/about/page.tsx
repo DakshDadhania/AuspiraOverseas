@@ -21,10 +21,10 @@ const AboutPage = () => {
   };
 
   const stats = [
-    { number: "15+", label: "Years of Excellence", icon: Award },
-    { number: "500+", label: "Satisfied Clients", icon: Users },
-    { number: "25K+", label: "Tons Exported", icon: Factory },
-    { number: "30+", label: "Countries Served", icon: Globe },
+    { number: "5+", label: "Years of Excellence", icon: Award },
+    { number: "55+", label: "Satisfied Clients", icon: Users },
+    { number: "4K+", label: "Tons Exported", icon: Factory },
+    { number: "10+", label: "Countries Served", icon: Globe },
   ];
 
   const milestones = [

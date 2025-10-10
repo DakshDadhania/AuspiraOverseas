@@ -48,7 +48,7 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 99787 28781", "Owner: Shubh Fefar"],
+      details: ["+91 99787 28781", "Owner: Shubh Fefar", "+91 97376 60563", "Partner: Ronak Bhatia"],
       description: "Mon - Sat: 9:00 AM - 6:00 PM"
     },
     {
@@ -270,6 +270,7 @@ const ContactPage = () => {
                         <option value="green-chillies">Green Chillies</option>
                         <option value="curry-leaves">Curry Leaves</option>
                         <option value="bulk-order">Bulk Mixed Order</option>
+                        <option value="others">Others</option>
                       </select>
                     </div>
 
